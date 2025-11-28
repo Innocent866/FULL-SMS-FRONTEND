@@ -24,7 +24,10 @@ const ParentDashboard = () => {
         apiClient.get('/parent/dashboard'),
         apiClient.get('/assignments')
       ]);
+
+      console.log(dashboardRes);
       setData({ ...dashboardRes.data.data, assignments: assignmentsRes.data.data });
+      
     };
     fetchData();
   }, []);
@@ -36,15 +39,10 @@ const ParentDashboard = () => {
           <p className="text-3xl font-bold">{data.children.length}</p>
         </Card>
         <Card title="Pending Fees">
-          <p className="text-3xl font-bold">₦{data.pendingFees.reduce((sum, fee) => sum + fee.totalDue, 0).toLocaleString()}</p>
+          <p className="text-3xl font-bold">{data.pendingFees.length}</p>
         </Card>
         <Card
           title="Announcements"
-          action={
-            <Link to="/parent/announcements" className="text-sm font-semibold text-sidebar hover:underline">
-              View all
-            </Link>
-          }
         >
           <p className="text-3xl font-bold">{data.announcements.length}</p>
         </Card>
