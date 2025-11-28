@@ -29,7 +29,7 @@ const FeesPage = () => {
   const [submitting, setSubmitting] = useState(false);
 
   const { user } = useAuth();
-  const apiBaseUrl = "http://localhost:5000/api";
+  const apiBaseUrl = "https://full-sms-backend.onrender.com/api";
 
   // Always use smsAccessToken
   const getAuthConfig = () => {

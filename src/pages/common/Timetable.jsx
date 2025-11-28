@@ -13,7 +13,7 @@ const TimetablePage = () => {
     const loadTimetable = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/teacher/timetable",
+          "https://full-sms-backend.onrender.com/api/teacher/timetable",
           {
             headers: { Authorization: `Bearer ${token}` },
             withCredentials: true,

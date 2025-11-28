@@ -23,7 +23,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://full-sms-backend.onrender.com/api",
   withCredentials: true,
 });
 

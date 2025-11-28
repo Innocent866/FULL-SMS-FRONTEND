@@ -19,7 +19,7 @@ const TeacherDashboard = () => {
         setError(null);
   
         const { data } = await axios.get(
-          'http://localhost:5000/api/teacher/dashboard',
+          'https://full-sms-backend.onrender.com/api/teacher/dashboard',
           { headers: { Authorization: `Bearer ${token}` } },
           // { withCredentials: true } 
           // include cookies for auth

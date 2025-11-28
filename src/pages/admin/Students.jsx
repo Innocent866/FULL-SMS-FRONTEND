@@ -90,7 +90,7 @@ const AdminStudentsPage = () => {
 
   const fetchClasses = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/admin/classes', 
+      const { data } = await axios.get('https://full-sms-backend.onrender.com/api/admin/classes', 
         
         { headers: { Authorization: `Bearer ${token}` } });
       console.log(data);

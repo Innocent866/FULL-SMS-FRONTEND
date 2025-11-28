@@ -16,7 +16,7 @@ const StudentTimetablePage = () => {
       try {
         setError("");
         const res = await axios.get(
-          "http://localhost:5000/api/student/timetable",
+          "https://full-sms-backend.onrender.com/api/student/timetable",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -28,7 +28,7 @@ const ParentSignup = () => {
     setNotification(null);
     const payload = { ...values, password: password?.trim() ? password : undefined };
     try {
-      await axios.post(`http://localhost:5000/api/auth/parent/signup`, payload);
+      await axios.post(`https://full-sms-backend.onrender.com/api/auth/parent/signup`, payload);
       setNotification({
         type: 'success',
         message: payload.password
